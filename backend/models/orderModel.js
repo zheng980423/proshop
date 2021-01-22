@@ -1,4 +1,4 @@
-import mongoose, { Mongoose } from 'mongoose';
+import mongoose from 'mongoose';
 const orderSchema = mongoose.Schema(
   {
     user: {
@@ -13,7 +13,7 @@ const orderSchema = mongoose.Schema(
         image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
-          type: Mongoose.Schema.Types.ObjectId,
+          type: mongoose.Schema.Types.ObjectId,
           required: true,
           ref: 'Product',
         },
@@ -56,7 +56,7 @@ const orderSchema = mongoose.Schema(
       default: false,
     },
     paidAt: {
-      type: Data,
+      type: Date,
     },
     IsDelivered: {
       type: Boolean,
@@ -64,7 +64,7 @@ const orderSchema = mongoose.Schema(
       default: false,
     },
     deliveredAt: {
-      type: Data,
+      type: Date,
     },
   },
   { timestamps: true }
