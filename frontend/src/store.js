@@ -5,17 +5,18 @@ import {
   productListReducer,
   productDetailsListReducer,
 } from './reducers/productReducers';
-import { cartReucer } from './reducers/cartReducers';
+import { cartReducer } from './reducers/cartReducers';
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsListReducer,
-  cart: cartReucer,
+  cart: cartReducer,
 });
-const cartItemFromStorage = localStorage.getItem('cartItem')
-  ? JSON.parse(localStorage.getItem('cartItem'))
+//从localStorage 中获取cartItem
+const cartItemFromStorage = localStorage.getItem('cartItems')
+  ? JSON.parse(localStorage.getItem('cartItems'))
   : [];
 const initialState = {
-  cart: { cartItem: cartItemFromStorage },
+  cart: { cartItems: cartItemFromStorage },
 };
 const middleware = [thunk];
 const store = createStore(
