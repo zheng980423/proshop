@@ -5,11 +5,18 @@ import {
   productListReducer,
   productDetailsListReducer,
 } from './reducers/productReducers';
+import { cartReucer } from './reducers/cartReducers';
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsListReducer,
+  cart: cartReucer,
 });
-const initialState = {};
+const cartItemFromStorage = localStorage.getItem('cartItem')
+  ? JSON.parse(localStorage.getItem('cartItem'))
+  : [];
+const initialState = {
+  cart: { cartItem: cartItemFromStorage },
+};
 const middleware = [thunk];
 const store = createStore(
   reducer,
