@@ -7,6 +7,10 @@ import {
 } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
 import {
+  orderCreateReducer,
+  orderDetailsReducer,
+} from './reducers/orderReducers';
+import {
   userLoginReducer,
   userRegisterReducer,
   userDetailsReducer,
@@ -21,6 +25,8 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
   userUpdateProfile: userUpdateProfileReducer,
+  orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
 });
 //从localStorage 中获取cartItem
 const cartItemFromStorage = localStorage.getItem('cartItems')
