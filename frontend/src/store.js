@@ -14,6 +14,8 @@ import {
   orderDetailsReducer,
   orderPayReducer,
   orderListMyReducer,
+  orderListReducer,
+  orderDeliverReducer,
 } from './reducers/orderReducers';
 import {
   userLoginReducer,
@@ -42,7 +44,9 @@ const reducer = combineReducers({
   orderCreate: orderCreateReducer,
   orderDetails: orderDetailsReducer,
   orderPay: orderPayReducer,
+  orderDeliver: orderDeliverReducer,
   orderListMy: orderListMyReducer,
+  orderList: orderListReducer,
 });
 //从localStorage 中获取cartItem
 const cartItemFromStorage = localStorage.getItem('cartItems')
