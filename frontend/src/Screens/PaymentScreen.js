@@ -22,10 +22,10 @@ const PaymentScreen = ({ history }) => {
   return (
     <FormContainer>
       <CheckOutSteps step1 step2 step3 />
-      <h1>Payment Method</h1>
+      <h1>支付方式</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label as="legend">Select Method</Form.Label>
+          <Form.Label as="legend">选择方式</Form.Label>
 
           <Col>
             <Form.Check
@@ -52,7 +52,7 @@ const PaymentScreen = ({ history }) => {
           </Col>
         </Form.Group>
         <Button type="submit" variant="primary">
-          Continue
+          继续
         </Button>
       </Form>
     </FormContainer>

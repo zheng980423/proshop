@@ -25,13 +25,13 @@ const ShippingScreen = ({ history }) => {
   return (
     <FormContainer>
       <CheckOutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1>邮寄</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address">
-          <Form.Label>Address</Form.Label>
+          <Form.Label>地址</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter address"
+            placeholder="请输入地址"
             value={address}
             required
             onChange={e => setAddress(e.target.value)}
@@ -39,10 +39,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId="city">
-          <Form.Label>City</Form.Label>
+          <Form.Label>城市</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter city"
+            placeholder="请输入城市"
             value={city}
             required
             onChange={e => setCity(e.target.value)}
@@ -50,10 +50,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId="postalCode">
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label>邮寄编码</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter postal code"
+            placeholder="输入邮寄编码"
             value={postalCode}
             required
             onChange={e => setPostalCode(e.target.value)}
@@ -61,10 +61,10 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Form.Group controlId="country">
-          <Form.Label>Country</Form.Label>
+          <Form.Label>选择国家</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter country"
+            placeholder="请输入国家"
             value={country}
             required
             onChange={e => setCountry(e.target.value)}
@@ -72,7 +72,7 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Button type="submit" variant="primary">
-          Continue
+          继续
         </Button>
       </Form>
     </FormContainer>
