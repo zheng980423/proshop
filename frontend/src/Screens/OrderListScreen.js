@@ -22,7 +22,7 @@ const OrderListScreen = ({ history }) => {
 
   return (
     <>
-      <h1>Orders</h1>
+      <h1>订单</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -32,11 +32,11 @@ const OrderListScreen = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>USER</th>
-              <th>DATE</th>
-              <th>TOTAL</th>
-              <th>PAID</th>
-              <th>DELIVERED</th>
+              <th>用户</th>
+              <th>日期</th>
+              <th>总计</th>
+              <th>是否支付</th>
+              <th>是否发货</th>
             </tr>
           </thead>
           <tbody>
@@ -63,7 +63,7 @@ const OrderListScreen = ({ history }) => {
                 <td>
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button variant="light" className="btn-sm">
-                      Details
+                      详细信息
                     </Button>
                   </LinkContainer>
                 </td>

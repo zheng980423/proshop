@@ -56,10 +56,10 @@ const ProfileScreen = ({ location, history }) => {
   return (
     <Row>
       <Col md={3}>
-        <h2>User Profile</h2>
+        <h2>个人主页</h2>
         {message && <Message variant="danger">{message}</Message>}
         {}
-        {success && <Message variant="success">Profile Updated</Message>}
+        {success && <Message variant="success">主页更新成功</Message>}
         {loading ? (
           <Loader />
         ) : error ? (
@@ -67,7 +67,7 @@ const ProfileScreen = ({ location, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>姓名</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -77,7 +77,7 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label>Email Address</Form.Label>
+              <Form.Label>邮箱</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter email"
@@ -87,7 +87,7 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>密码</Form.Label>
               <Form.Control
                 type="password"
                 placeholder="Enter password"
@@ -97,23 +97,23 @@ const ProfileScreen = ({ location, history }) => {
             </Form.Group>
 
             <Form.Group controlId="confirmPassword">
-              <Form.Label>Confirm Password</Form.Label>
+              <Form.Label>确认密码</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Confirm password"
+                placeholder="再次确认您的密码"
                 value={confirmPassword}
                 onChange={e => setConfirmPassword(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              更新
             </Button>
           </Form>
         )}
       </Col>
       <Col md={9}>
-        <h2>My Orders</h2>
+        <h2>我的订单</h2>
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (
@@ -123,10 +123,10 @@ const ProfileScreen = ({ location, history }) => {
             <thead>
               <tr>
                 <th>ID</th>
-                <th>DATE</th>
-                <th>TOTAL</th>
-                <th>PAID</th>
-                <th>DELIVERED</th>
+                <th>日期</th>
+                <th>总计</th>
+                <th>是否支付</th>
+                <th>是否发货</th>
                 <th></th>
               </tr>
             </thead>
@@ -153,7 +153,7 @@ const ProfileScreen = ({ location, history }) => {
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
                       <Button className="btn-sm" variant="light">
-                        Details
+                        详细信息
                       </Button>
                     </LinkContainer>
                   </td>

@@ -28,7 +28,7 @@ const UserListScreen = ({ history }) => {
   };
   return (
     <>
-      <h1>Users</h1>
+      <h1>用户</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -38,9 +38,9 @@ const UserListScreen = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Admin</th>
+              <th>姓名</th>
+              <th>邮箱</th>
+              <th>是否为管理员</th>
               <th></th>
             </tr>
           </thead>

@@ -1,6 +1,6 @@
 const products = [
   {
-    name: 'Airpods Wireless Bluetooth Headphones',
+    name: 'Airpods 无限蓝牙耳机',
     image: '/images/airpods.jpg',
     description:
       'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
@@ -12,7 +12,7 @@ const products = [
     numReviews: 12,
   },
   {
-    name: 'iPhone 11 Pro 256GB Memory',
+    name: 'iPhone 11 Pro 256G内存',
     image: '/images/phone.jpg',
     description:
       'Introducing the iPhone 11 Pro. A transformative triple-camera system that adds tons of capability without complexity. An unprecedented leap in battery life',
@@ -24,7 +24,7 @@ const products = [
     numReviews: 8,
   },
   {
-    name: 'Cannon EOS 80D DSLR Camera',
+    name: '佳能 EOS 80D DSLR 照相机',
     image: '/images/camera.jpg',
     description:
       'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
@@ -36,7 +36,7 @@ const products = [
     numReviews: 12,
   },
   {
-    name: 'Sony Playstation 4 Pro White Version',
+    name: '索尼 PS4 pro',
     image: '/images/playstation.jpg',
     description:
       'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
@@ -48,7 +48,7 @@ const products = [
     numReviews: 12,
   },
   {
-    name: 'Logitech G-Series Gaming Mouse',
+    name: '游戏鼠标',
     image: '/images/mouse.jpg',
     description:
       'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
@@ -60,7 +60,7 @@ const products = [
     numReviews: 10,
   },
   {
-    name: 'Amazon Echo Dot 3rd Generation',
+    name: '亚马逊机器人',
     image: '/images/alexa.jpg',
     description:
       'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',

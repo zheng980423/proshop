@@ -33,10 +33,10 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1>购物车</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your Cart is Empty <Link to="/">Go back</Link>
+            您的购物车是空的 <Link to="/">返回</Link>
           </Message>
         ) : (
           <ListGroup variant="flush">
@@ -94,8 +94,8 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                共计 ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                件商品
               </h2>
               $
               {cartItems
@@ -109,7 +109,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To checkOut
+                结算
               </Button>
             </ListGroup.Item>
           </ListGroup>

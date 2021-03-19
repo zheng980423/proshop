@@ -91,10 +91,10 @@ const ProductEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to="/admin/productlist" className="btn btn-light my-3">
-        Go Back
+        返回
       </Link>
       <FormContainer>
-        <h1>Edit Product</h1>
+        <h1>编辑商品</h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
         {loading ? (
@@ -104,7 +104,7 @@ const ProductEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>名称</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -114,7 +114,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="price">
-              <Form.Label>Price</Form.Label>
+              <Form.Label>价格</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter price"
@@ -124,7 +124,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="image">
-              <Form.Label>Image</Form.Label>
+              <Form.Label>图片</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter image url"
@@ -133,7 +133,7 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
               <Form.File
                 id="image-file"
-                label="Choose File"
+                label="选择文件"
                 custom
                 onChange={uploadFileHandler}
               ></Form.File>
@@ -141,7 +141,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="brand">
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>品牌</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter brand"
@@ -151,7 +151,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="countInStock">
-              <Form.Label>Count In Stock</Form.Label>
+              <Form.Label>库存数量</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter countInStock"
@@ -161,7 +161,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="category">
-              <Form.Label>Category</Form.Label>
+              <Form.Label>分类</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter category"
@@ -171,7 +171,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>描述</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter description"
@@ -181,7 +181,7 @@ const ProductEditScreen = ({ match, history }) => {
             </Form.Group>
 
             <Button type="submit" variant="primary">
-              Update
+              更新
             </Button>
           </Form>
         )}
